@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Healthcare Emergency",
+    "slug": "healthcare-emergency",
+    "scheme": "healthcare",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.healthcare.emergency",
+      "infoPlist": {
+        "NSLocationAlwaysUsageDescription": "Required for emergency location sharing",
+        "LSApplicationQueriesSchemes": ["healthcare"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "data": [
+            {
+              "scheme": "healthcare",
+              "host": "*"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ],
+      "permissions": ["ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "SEND_SMS"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "supabaseUrl": "YOUR_SUPABASE_URL",
+      "supabaseAnonKey": "YOUR_SUPABASE_KEY",
+      "resendApiKey": "YOUR_RESEND_KEY",
+      "appUrl": "healthcare://"
+    }
+  }
+}

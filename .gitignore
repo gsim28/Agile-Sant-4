@@ -1,0 +1,12 @@
+# .gitignore
+node_modules/
+.expo/
+dist/
+.env
+*.keystore
+*.jks
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
